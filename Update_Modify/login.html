@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EcoSphere - Login</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="./login.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="header">
+
+<nav class="nav">
+
+<div class="logo">
+<h1><i class="fas fa-leaf"></i> EcoSphere</h1>
+</div>
+
+<ul class="nav-links">
+<li><a href="./home.html">Home</a></li>
+<li><a href="./about.html">About</a></li>
+<li><a href="./contact.html">Contact</a></li>
+<li><a href="./login.html">Login</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ================= LOGIN BOX ================= -->
+
+<div class="login-box">
+
+<i class="fas fa-leaf logo-icon"></i>
+
+<h2>EcoSphere Login</h2>
+
+<div class="input-group">
+<i class="fa-solid fa-user"></i>
+<input type="text" id="username" placeholder="Username">
+</div>
+
+<div class="input-group">
+<i class="fa-solid fa-lock"></i>
+<input type="password" id="password" placeholder="Password">
+</div>
+
+<button class="login-btn" onclick="login()">Login</button>
+
+<div class="extra">
+<a href="#"><samp>Forgot Password?</samp></a>
+<a href="./register.html">Create Account</a>
+</div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+<div class="footer-bottom">
+<p>© 2026 EcoSphere. All rights reserved. | Making sustainability profitable.</p>
+</div>
+
+</footer>
+
+<!-- ================= SCRIPT ================= -->
+
+<script>
+
+function login(){
+
+let user = document.getElementById("username").value;
+let pass = document.getElementById("password").value;
+
+if(user === "seller" && pass === "1234"){
+
+localStorage.setItem("login","true");
+
+// window.location.href = "EcoS_TESTING.html";
+window.location.href = "seller.html";
+
+// window.location.href = "EcoS_DASHBOARD.html";
+
+}
+else{
+
+alert("Invalid Login Credentials\n\nDemo Login:\nUsername: seller\nPassword: 1234");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
